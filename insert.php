@@ -29,7 +29,7 @@ if (!empty($_POST["workname"]) && !empty($_POST["lien_github"]) && isset($_FILES
                 echo $message;
             }
         } else {
-            echo "Une erreur s'est produite lors du téléchargement du fichier.";
+            echo "Erreur de téléchargement du fichier.";
         }
     } else {
         echo "Sélectionner un fichier à télécharger.";

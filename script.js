@@ -1,13 +1,16 @@
 const gallery = document.querySelector(".gallery");
-console.log(gallery)
-content.forEach(element => {
-   console.table(element);
-   console.log(element.lien_picture);
-   console.log(element.workname);
-   
 
-   const illustration = document.createElement('img');
-   illustration.src = element.lien_picture;
-   illustration.alt = element.workname;
-   gallery.appendChild(illustration);
+content.forEach((element) => {
+  const container_work = document.createElement("div");
+  container_work.classList.add("container_work");
+
+  const illustration = document.createElement("img");
+  illustration.src = element.lien_picture;
+  illustration.alt = element.workname;
+  const nomProjet = document.createElement("p");
+  nomProjet.innerHTML = element.workname;
+  console.log(nomProjet);
+  container_work.appendChild(illustration);
+  container_work.appendChild(nomProjet);
+  gallery.appendChild(container_work);
 });

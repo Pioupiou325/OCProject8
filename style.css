@@ -1,0 +1,56 @@
+label {
+  width: 20%;
+  display: inline-block;
+  text-align: left;
+  margin-top: 5px;
+}
+body {
+  width: 80%;
+  font-family: arial;
+  margin: 5px auto;
+  background-color: #f4f7f8;
+  padding: 20px;
+  color: green;
+}
+fieldset {
+  border-radius: 20px;
+}
+legend {
+  font-size: large;
+  margin-bottom: 10px;
+}
+input[type="text"] {
+  border-radius: 5px;
+  padding: 10px;
+  width: 60%;
+  background-color: white;
+  margin: 10px;
+}
+.button_file {
+  color:red;
+ }
+
+input[type="submit"] {
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #16ad85;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 10px;
+}
+ul {
+  list-style: none;
+  padding: 20px;
+  overflow: hidden;
+  margin: 10px;
+  background-color: #333;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+li {
+  padding: 10px;
+}
+li a {
+  color: white;
+}

@@ -1,0 +1,65 @@
+body {
+  background-color: rgb(13, 2, 33);
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  color: honeydew;
+  font-size: 90px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  font-size: 50px;
+}
+h3 {
+  display: flex;
+  justify-content: center;
+  color: burlywood;
+  font-size: 30px;
+}
+nav {
+  margin-bottom: 300px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li a {
+  color: aqua;
+  font-size: 30px;
+  list-style: none;
+  position: fixed;
+  text-decoration: none;
+}
+.fullstack {
+  display: flex;
+  justify-content: space-around;
+}
+.competences {
+  margin-bottom: 700px;
+  margin-top: 300px;
+}
+.competences p {
+  color: blueviolet;
+  font-size: 50px;
+}
+.projets {
+  margin-bottom: 300px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.gallery {
+  
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gallery img{
+   width:32%;
+   margin:20px;
+   height:400px;
+   object-fit: cover;
+}

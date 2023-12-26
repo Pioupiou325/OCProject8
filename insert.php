@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "connect.php";
 
 if (!empty($_POST["workname"]) && !empty($_POST["lien_github"]) && isset($_FILES["lien_picture"])) {
@@ -23,18 +24,24 @@ if (!empty($_POST["workname"]) && !empty($_POST["lien_github"]) && isset($_FILES
 
             if ($res) {
                 $message = "Requête OK";
-                echo $message;
+                
             } else {
                 $message = "La requête n'a pas été exécutée";
-                echo $message;
+                
             }
+            
         } else {
-            echo "Erreur de téléchargement du fichier.";
+            $message = "Erreur de téléchargement du fichier.";
         }
     } else {
-        echo "Sélectionner un fichier à télécharger.";
+        $message = "Sélectionner un fichier à télécharger.";
     }
+    $_SESSION["message"] = $message;
+header("location:/portfolio/form.php");
 } else {
-    echo "Certains champs sont vides ou manquants.";
+    $message = "Certains champs sont vides ou manquants.";
+    $_SESSION["message"] = $message;
+header("location:/portfolio/form.php");
 }
+
 ?>

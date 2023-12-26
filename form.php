@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +18,16 @@
       </nav>
     </header>
     <div class="message">
+      <?php
+      if (isset($_SESSION["message"])&& !empty( $_SESSION["message"])) {
+        $message=$_SESSION["message"];
+        unset($_SESSION["message"]);
+      }else{
+
+        $message= "";
+      }
+      ?>
+
   <p><?php echo $message  ?></p>    
   </div>
     <form action="insert.php" method="POST" enctype="multipart/form-data">

@@ -1,12 +1,19 @@
 const user = "Pioupiou325"; 
-
+const headers = {
+  'Authorization': 'Bearer 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',
+  'Content-Type': 'application/json'
+};
+console.table(content);
 async function afficherStatsGit(nameGit) {
   const url = `https://api.github.com/repos/${user}/${nameGit}/languages`;
   
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: headers
+    });
     if (!response.ok) {
-      throw new Error('La requête non aboutie');
+      throw new Error('La requête a échouée');
     }
     
     return await response.json();   
@@ -62,6 +69,30 @@ async function affiche_element() {
     }
     lienBox.appendChild(containerWork);
     gallery.appendChild(lienBox);
+
+    siteweb = document.createElement("a");
+    siteweb.href = element.lien_site;
+    siteweb.innerHTML = element.lien_site;
+
+    
+    
+    containerWork.appendChild(siteweb);
   }
 }
 affiche_element();
+
+
+const projectsSection = document.getElementById('projets');
+const projectsGallery = document.getElementById('gallery');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // alert("La section 'projets' est visible !");
+      projectsGallery.classList.add('animate-projects');
+    } else {
+      projectsGallery.classList.remove('animate-projects');
+      observer.observe(projectsSection);
+    }
+  });
+});
+observer.observe(projectsSection);

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php
 include "connect.php"; 
 
@@ -20,7 +21,7 @@ if (isset($_GET['id'])) {
                 $res = $req->execute(['id' => $id_fichier]);
 
                 if ($res) {
-                    echo 'Le fichier et le lien dans la bdd supprimés';
+                    $message = "delete OK";
                 } else {
                     echo 'Erreur delete dans la bdd.';
                 }
@@ -33,6 +34,8 @@ if (isset($_GET['id'])) {
     } else {
         echo 'Fichier non trouvé dans la bdd.';
     }
+    $_SESSION["message"] = $message;
+header("location:/portfolio/list.php");
 } else {
     echo 'Pas de ID';
 }

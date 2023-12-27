@@ -18,15 +18,17 @@ echo "</script>";
     pour lier votre site web avec une base de données, je réalise le front et le back ainsi que 
     la gestion de votre base de données clients ou produits">
     <title>Test js php</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleindex.css" />
     
   </head>
-  <header>
+  <header id="home">
     <nav>
       <ul>
-        <li><a href="#competences">COMPETENCES</a></li>
+        <li><a href="#home">PORTFOLIO</a></li>
         <li><a href="#projets">PROJETS</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
@@ -48,23 +50,23 @@ echo "</script>";
       <section class="frontend">
          <h3>FRONTEND</h3>
         
-        <img src="./datas/logo_html.png" alt="html">
+        <!-- <img src="./datas/logo_html.png" alt="html">
         
         <img src="./datas/logo_css.png" alt="css">
         
-        <img src="./datas/logo_js.webp" alt="js">
+        <img src="./datas/logo_js.webp" alt="js"> -->
       </section>
       <section class="backend">
          <h3>BACKEND</h3>
         
-        <img src="./datas/logo_nodejs.png" alt="nodejs">
+        <!-- <img src="./datas/logo_nodejs.png" alt="nodejs"> -->
       </section>
       <section class="bases_de_donnees">
          <h3>BASES DE DONNEES</h3>
         
-        <img src="./datas/logo_mongodb.png" alt="mongodb">
+        <!-- <img src="./datas/logo_mongodb.png" alt="mongodb">
         
-        <img src="./datas/logo_sql.png" width="40px" alt="mysql">
+        <img src="./datas/logo_sql.png" width="40px" alt="mysql"> -->
       </section>
    </div>
     </section>
@@ -90,21 +92,13 @@ echo "</script>";
         <input type="email" name="user_mail" placeholder="user_mail" />
 
         <label>Votre demande</label>
-        <input type="text" name="lien_github" placeholder="Ecrivez ici" />        
+        <textarea name="demande" placeholder="Ecrivez ici"></textarea>      
 
         <input type="submit" value="envoyer" />
       </fieldset>
     </form>
 
-      <?php
-  if (!empty ($res) ){
-    foreach ($res as $row) {
-?>
-<p><?= htmlspecialchars_decode($row["workname"])?></p>
-<?php
-    }
-  }   
-  ?>
+      
 
     </section>
     <script src="script.js"></script>

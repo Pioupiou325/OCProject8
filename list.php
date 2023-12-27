@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,19 @@
          </ul>
       </nav>
    </header>
+   <div class="message">
+      <?php
+      if (isset($_SESSION["message"])&& !empty( $_SESSION["message"])) {
+        $message=$_SESSION["message"];
+        unset($_SESSION["message"]);
+      }else{
+
+        $message= "";
+      }
+      ?>
+
+  <p><?php echo $message  ?></p>    
+  </div>
    <h1>Liste des projets réalisés</h1>
    <table>
       <tr>
@@ -23,6 +37,7 @@
          <th>Workname</th>
          <th>Lien Github</th>
          <th>Lien Picture</th>
+         <th>lien Site</th>
          <th>Action</th>
       </tr>
       <?php

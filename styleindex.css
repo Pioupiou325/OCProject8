@@ -1,13 +1,15 @@
-*{
-  font-family: 'Roboto', sans-serif;
+* {
+  /* font-family: "Roboto", sans-serif; */
+  font-family: 'Dancing Script', cursive;
+font-family: 'Montserrat', sans-serif;
 }
 body {
-    background-color: aliceblue;
+  background-color: aliceblue;
 }
 h1 {
   display: flex;
-  justify-content: center;
-  color: honeydew;
+  text-align: center;
+ 
   font-size: 110px;
 }
 
@@ -23,19 +25,29 @@ h3 {
   color: burlywood;
   font-size: 30px;
 }
+header {
+  padding: 10px 16px;
+  height: 70px; 
+  
+}
 nav {
-  margin-bottom: 300px;
+  background-color: rgb(6, 6, 6);
+  position: fixed;
+  top:0;  
+  width: 100%;
+  height: 70px;
+  z-index:10000;
+
 }
 nav ul {
   display: flex;
   justify-content: space-around;
 }
-nav ul li{
+nav ul li {
   list-style: none;
-
 }
 nav ul li a {
-  color: aqua;
+  color: white;
   font-size: 30px;
   position: fixed;
   text-decoration: none;
@@ -43,6 +55,7 @@ nav ul li a {
 .fullstack {
   display: flex;
   justify-content: space-around;
+  height: 100px;
 }
 .competences {
   margin-bottom: 700px;
@@ -61,8 +74,8 @@ nav ul li a {
   flex-direction: row;
   margin: 100px;
 }
-.fullstack img{
-  margin:50px;
+.fullstack img {
+  margin: 50px;
 }
 .fullstack .frontend {
   border-radius: 10%;
@@ -83,7 +96,7 @@ nav ul li a {
   width: 25%;
   justify-content: center;
   border: 1px solid rgb(255, 174, 0);
-  
+
   background-color: blanchedalmond;
 }
 .projets a {
@@ -91,29 +104,30 @@ nav ul li a {
   margin-bottom: 300px;
   margin-left: 50px;
   margin-right: 50px;
+  width:25%;
 }
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width:100%;
 }
 .container_work {
+  border:1px solid red;
   width: 100%;
   margin: 20px;
   position: relative;
-  height: 500px;
+  height: 700px;
   background-color: aliceblue;
   border-radius: 20px;
-  transition: slideIn 0.8s ease;
+  
 }
 
 .container_work img {
-  width: 100%;
-  height: 300px;
+  width: 100%; 
   object-fit: cover;
   border-radius: 20px;
- 
 }
 .container_work p {
   font-size: 24px;
@@ -128,40 +142,107 @@ nav ul li a {
 
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-@keyframes slideIn {
-  0%,
-  100% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(0);
-  }
+
+.animate-projects{
+  
+  animation: rebond 2s ease 0s 1 normal forwards;
+}
+
+
+
+@keyframes rebond {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
 }
 
 body {
-  font-family: "Bebas Neue", sans-serif; /* Utilisation de la police Bebas Neue */
+  /* font-family: "Bebas Neue", sans-serif; Utilisation de la police Bebas Neue */
   margin: 0;
   padding: 0;
- 
 }
 
 .container {
-  width:100%;
+  width: 100%;
   position: relative;
   display: inline-block;
   overflow: hidden;
 }
 
 .anim {
+  
   display: flex;
   justify-content: center;
-  font-size: 200px; 
-  color: transparent; 
+  font-size: 200px;
+  color: transparent;
   overflow: hidden;
   position: relative;
   background-image: url("https://pioupiou325.github.io/OCProject_5/assets/images/slider/ryoji_iwata.jpg"); /* Ajoute le chemin de ton image */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  -webkit-text-stroke: 2px red; 
+  -webkit-text-stroke: 2px red;
+}
+.anim p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+label {
+  width: 20%;
+  display: inline-block;
+  text-align: left;
+  margin-top: 5px;
+}
+input[type="text"] {
+  border-radius: 5px;
+  padding: 10px;
+  width: 60%;
+  background-color: white;
+  margin: 10px;
+}
+input[type="submit"] {
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #16ad85;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 10px;
 }

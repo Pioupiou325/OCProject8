@@ -41,41 +41,19 @@ echo "</script>";
     </div>
   </div>
     
-    <h1>Développeur de sites Web rapides, sécurisés</h1>
-    <h2>et Green Code friendly</h2>  
+    <h1>Développeur fullstack de sites Web rapides sécurisés</h1>
+    <p>et Green Code friendly</p>  
     
-    <section id="competences" class="competences">
-      <h2>Mes Compétences</h2>
-      <div class="fullstack">
-      <section class="frontend">
-         <h3>FRONTEND</h3>
-        
-        <!-- <img src="./datas/logo_html.png" alt="html">
-        
-        <img src="./datas/logo_css.png" alt="css">
-        
-        <img src="./datas/logo_js.webp" alt="js"> -->
-      </section>
-      <section class="backend">
-         <h3>BACKEND</h3>
-        
-        <!-- <img src="./datas/logo_nodejs.png" alt="nodejs"> -->
-      </section>
-      <section class="bases_de_donnees">
-         <h3>BASES DE DONNEES</h3>
-        
-        <!-- <img src="./datas/logo_mongodb.png" alt="mongodb">
-        
-        <img src="./datas/logo_sql.png" width="40px" alt="mysql"> -->
-      </section>
-   </div>
-    </section>
+ 
 
     <section id="projets" class="projets">
       <h2>Mes projets</h2>
       
-
+      
       <div id="gallery" class="gallery"></div>
+      
+      
+
     </section>
 
 

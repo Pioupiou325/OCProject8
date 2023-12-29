@@ -5,12 +5,15 @@ font-family: 'Montserrat', sans-serif;
 }
 body {
   background-color: aliceblue;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 h1 {
   display: flex;
   text-align: center;
  
   font-size: 110px;
+  animation: rebond 2s ease 0s 1 normal forwards;
 }
 
 h2 {
@@ -26,11 +29,14 @@ h3 {
   font-size: 30px;
 }
 header {
-  padding: 10px 16px;
-  height: 70px; 
-  
+display:flex;
+justify-content:center;
+padding:150px;
+
 }
 nav {
+  
+  border-radius: 10px;
   background-color: rgb(6, 6, 6);
   position: fixed;
   top:0;  
@@ -52,66 +58,25 @@ nav ul li a {
   position: fixed;
   text-decoration: none;
 }
-.fullstack {
-  display: flex;
-  justify-content: space-around;
-  height: 100px;
-}
-.competences {
-  margin-bottom: 700px;
-  margin-top: 300px;
-}
-.competences p {
-  color: blueviolet;
-  font-size: 50px;
-}
-.competences .fullstack .frontend img,
-.competences .fullstack .backend img {
-  width: 100px;
-}
-.fullstack {
+
+.projets a {
   display: flex;
   flex-direction: row;
-  margin: 100px;
-}
-.fullstack img {
-  margin: 50px;
-}
-.fullstack .frontend {
-  border-radius: 10%;
-  width: 25%;
-  justify-content: center;
-  border: 1px solid rgb(255, 174, 0);
-  background-color: blanchedalmond;
-}
-.fullstack .backend {
-  border-radius: 10%;
-  width: 25%;
-  border: 1px solid rgb(255, 174, 0);
-  justify-content: center;
-  background-color: blanchedalmond;
-}
-.fullstack .bases_de_donnees {
-  border-radius: 10%;
-  width: 25%;
-  justify-content: center;
-  border: 1px solid rgb(255, 174, 0);
-
-  background-color: blanchedalmond;
-}
-.projets a {
   text-decoration: none;
   margin-bottom: 300px;
   margin-left: 50px;
   margin-right: 50px;
-  width:25%;
+  width:50%;
 }
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width:100%;
+  /* width:100%; */
+}
+.container{
+  background-color: #5D2061;
 }
 .container_work {
   border:1px solid red;
@@ -125,7 +90,7 @@ nav ul li a {
 }
 
 .container_work img {
-  width: 100%; 
+  height: 100%; 
   object-fit: cover;
   border-radius: 20px;
 }
@@ -134,10 +99,14 @@ nav ul li a {
   color: burlywood;
 }
 .container_work:hover {
-  transform: rotate3d(0, 0, 1, 360deg);
+  box-shadow: 10px 5px 5px red;;
 }
 .container_work img:hover {
   opacity: 90%;
+}
+.arrows_caroussel{
+  width:200px;
+  fill:black;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
@@ -146,6 +115,7 @@ nav ul li a {
 .animate-projects{
   
   animation: rebond 2s ease 0s 1 normal forwards;
+  
 }
 
 
@@ -215,11 +185,12 @@ body {
   color: transparent;
   overflow: hidden;
   position: relative;
-  background-image: url("https://pioupiou325.github.io/OCProject_5/assets/images/slider/ryoji_iwata.jpg"); /* Ajoute le chemin de ton image */
+  /* background-image: url("https://pioupiou325.github.io/OCProject_5/assets/images/slider/ryoji_iwata.jpg"); Ajoute le chemin de ton image */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-stroke: 2px red;
+  animation: rebond 2s ease 0s 1 normal forwards;
 }
 .anim p{
   margin-top: 0;
@@ -245,4 +216,7 @@ input[type="submit"] {
   border-radius: 20px;
   width: 100%;
   margin-top: 10px;
+}
+.logo_in_work{
+  width:50px;
 }

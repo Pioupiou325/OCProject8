@@ -13,6 +13,7 @@ body {
   color: green;
 }
 fieldset {
+  display:grid;
   border-radius: 20px;
 }
 legend {
@@ -26,9 +27,9 @@ input[type="text"] {
   background-color: white;
   margin: 10px;
 }
-.button_file {
+/* .button_file {
   color:red;
- }
+ } */
 
 input[type="submit"] {
   padding: 20px;
@@ -36,6 +37,24 @@ input[type="submit"] {
   border: 1px solid #16ad85;
   border-radius: 20px;
   width: 100%;
+  margin-top: 10px;
+}
+input[type="file"] {
+  
+  font-size: 18px;
+  border: 1px solid #16ad85;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+
+textarea{
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #16ad85;
+  border-radius: 20px;
+  width: 1000px;
+  height: 80px;
   margin-top: 10px;
 }
 ul {

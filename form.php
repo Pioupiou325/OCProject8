@@ -43,9 +43,12 @@
         <label>lien site</label>
         <input type="text" name="lien_site" placeholder="lien site" />
 
+        <label>Commentaires</label>
+        <textarea name="comments" placeholder="Ecrivez ici"></textarea>
+          
         <label class="button_file" >illustration</label>
         <input type="file" name="lien_picture"  />
-        
+
         <input type="submit" value="envoyer" />
       </fieldset>
     </form>

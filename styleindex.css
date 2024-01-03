@@ -1,19 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
-  /* font-family: "Roboto", sans-serif; */
-  font-family: 'Dancing Script', cursive;
-font-family: 'Montserrat', sans-serif;
+  font-family: "Dancing Script", cursive;
+  font-family: "Montserrat", sans-serif;
 }
+
 body {
-  background-color: aliceblue;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0;
+  padding: 0;
 }
 h1 {
   display: flex;
   text-align: center;
- 
   font-size: 110px;
-  animation: rebond 2s ease 0s 1 normal forwards;
+  margin-bottom: 350px;
+  animation: rebondInverse 2s ease 0s 1 normal forwards;
 }
 
 h2 {
@@ -28,22 +28,22 @@ h3 {
   color: burlywood;
   font-size: 30px;
 }
-header {
-display:flex;
-justify-content:center;
-padding:150px;
 
+header {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+  padding-top: 100px;
 }
 nav {
-  
   border-radius: 10px;
-  background-color: rgb(6, 6, 6);
+  background-color: aliceblue;
+  border: 5px solid #5d2061;
   position: fixed;
-  top:0;  
-  width: 100%;
+  top: 0;
+  width: 95%;
   height: 70px;
-  z-index:10000;
-
+  z-index: 10000;
 }
 nav ul {
   display: flex;
@@ -53,121 +53,223 @@ nav ul li {
   list-style: none;
 }
 nav ul li a {
-  color: white;
+  background-color: aliceblue;
+  color: transparent;
   font-size: 30px;
   position: fixed;
   text-decoration: none;
+  -webkit-text-stroke: 2px red;
+  border-radius: 5px;
 }
-
-.projets a {
-  display: flex;
-  flex-direction: row;
-  text-decoration: none;
-  margin-bottom: 300px;
-  margin-left: 50px;
-  margin-right: 50px;
-  width:50%;
+.presentation p {
+  display: none;
+  justify-content: center;
+  position: relative;
+  font-size: 30px;
+  color: #5d2061;
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* width:100%; */
-}
-.container{
-  background-color: #5D2061;
-}
-.container_work {
-  border:1px solid red;
-  width: 100%;
-  margin: 20px;
+  overflow: hidden;
   position: relative;
-  height: 700px;
-  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 5px solid #5d2061;
   border-radius: 20px;
-  
+  margin-top: 100px;
+  margin-bottom: 150px;
 }
 
-.container_work img {
-  height: 100%; 
-  object-fit: cover;
-  border-radius: 20px;
+.container {
+  background-color: white;
+  border-radius: 100px;
 }
-.container_work p {
-  font-size: 24px;
+.containerWork {
+  width: 80%;
+  height: 800px;
+}
+.bloc_comments {
+  display: none;
+  width: 0%;
+  opacity: 0%;
+  margin-top:20px;
+}
+.bloc_comments p{
+  margin:0;
+}
+.container_liens{
+display: flex;
+justify-content: center;
+}
+.container_illustration {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  height: 645px;
+  margin-bottom: 70px;
+}
+
+.bloc_illustration {
+  width: 100%;
+  height: 645px;
+}
+.bloc_illustration img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.containerWork h4 {
+  font-size: 25px;
+  color: black;
+  margin: 0;
+  padding: 20px;
+  border-top: 5px solid #5d2061;
+  border-bottom: 5px solid #5d2061;
+  display: flex;
+  justify-content: center;
+}
+.containerWork p {
+  font-size: 28px;
   color: burlywood;
+  -webkit-text-stroke: 2px red;
+  display: flex;
+  justify-content: center;
 }
-.container_work:hover {
-  box-shadow: 10px 5px 5px red;;
+.container_stats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 145px;
+  margin: 0;
+  border-top:5px solid #5d2061;
 }
-.container_work img:hover {
+.logo_in_work {
+  height: 70%;
+}
+.container_stats p {
+  margin-bottom: 50px;
+}
+.arrows_caroussel_right,
+.arrows_caroussel_left {
+  width: 10%;
+  background-color: #5d2061;
+  opacity: 100%;
+}
+.arrows_caroussel_right:hover,
+.arrows_caroussel_left:hover {
   opacity: 90%;
 }
-.arrows_caroussel{
-  width:200px;
-  fill:black;
-}
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
-
-.animate-projects{
-  
+.animate-projects {
   animation: rebond 2s ease 0s 1 normal forwards;
-  
 }
-
-
+.animate-comments {
+  display: grid;
+  width: 50%;
+  opacity: 100%;
+  /* transition: display 0.1s, opacity 2s; */
+}
+.animate-illustration {
+  width: 50%;
+  height: 100%;
+  transition: width 0.5s, height 0.5s;
+}
+.animate-container_illustration {
+  height: 500px;
+  justify-content: space-between;
+  transition: justify-content 0.5s, height 0.5s;
+}
 
 @keyframes rebond {
-	0% {
-		animation-timing-function: ease-in;
-		opacity: 0;
-		transform: translateY(-250px);
-	}
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
 
-	38% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-		transform: translateY(0);
-	}
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-	55% {
-		animation-timing-function: ease-in;
-		transform: translateY(-65px);
-	}
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
 
-	72% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
 
-	81% {
-		animation-timing-function: ease-in;
-		transform: translateY(-28px);
-	}
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
 
-	90% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
 
-	95% {
-		animation-timing-function: ease-in;
-		transform: translateY(-8px);
-	}
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
 
-	100% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
 }
 
-body {
-  /* font-family: "Bebas Neue", sans-serif; Utilisation de la police Bebas Neue */
-  margin: 0;
-  padding: 0;
+@keyframes rebondInverse {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
 }
 
 .container {
@@ -178,45 +280,70 @@ body {
 }
 
 .anim {
-  
   display: flex;
   justify-content: center;
   font-size: 200px;
-  color: transparent;
-  overflow: hidden;
   position: relative;
-  /* background-image: url("https://pioupiou325.github.io/OCProject_5/assets/images/slider/ryoji_iwata.jpg"); Ajoute le chemin de ton image */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-stroke: 2px red;
   animation: rebond 2s ease 0s 1 normal forwards;
 }
-.anim p{
+.anim p {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+form {
+  display: grid;
+  margin: 200px;
+}
 label {
-  width: 20%;
+  width: 100%;
   display: inline-block;
   text-align: left;
   margin-top: 5px;
 }
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   border-radius: 5px;
   padding: 10px;
-  width: 60%;
+  width: 100%;
   background-color: white;
-  margin: 10px;
 }
 input[type="submit"] {
-  padding: 20px;
-  font-size: 18px;
-  border: 1px solid #16ad85;
+  padding: 10px;
+  font-size: 25px;
+  color: transparent;
+  -webkit-text-stroke: 1px red;
+  background-color: #5d2061;
+  border: 1px solid #5d2061;
   border-radius: 20px;
   width: 100%;
   margin-top: 10px;
 }
-.logo_in_work{
-  width:50px;
+input[type="submit"]:hover {
+  background-color: #420247;
+  font-size: 28px;
+  padding: 8px;
+}
+fieldset {
+  display: grid;
+  width: 98%;
+}
+legend,
+label {
+  color: #5d2061;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
 }

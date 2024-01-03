@@ -1,4 +1,5 @@
 <?php
+
 include "connect.php";
 $req = $link->prepare("SELECT * FROM works");
 $req->execute();
@@ -40,44 +41,39 @@ echo "</script>";
       <p>PIERRE PICARD</p>
     </div>
   </div>
-    
+    <div class="presentation">
     <h1>Développeur fullstack de sites Web rapides sécurisés</h1>
     <p>et Green Code friendly</p>  
     
- 
+    </div>
 
     <section id="projets" class="projets">
       <h2>Mes projets</h2>
-      
-      
-      <div id="gallery" class="gallery"></div>
-      
-      
-
+            
+      <div id="gallery" class="gallery">
+      </div>  
     </section>
-
-
-
-
 
     <section id="contact" class="contact">
       <h2>Contact</h2>
+      <div class="form_contact">
       <form action="contact.php" method="POST" >
       <fieldset>
         <legend>Formulaire de contact</legend>
 
         <label>Votre email</label>
-        <input type="email" name="user_mail" placeholder="user_mail" />
+        <input type="email" name="user_mail" placeholder="Entrez votre email" />
+
+        <label>Objet de la demande</label>
+        <input type="text" name="object" placeholder="objet de la demande" />
 
         <label>Votre demande</label>
         <textarea name="demande" placeholder="Ecrivez ici"></textarea>      
 
-        <input type="submit" value="envoyer" />
+        <input type="submit" value="ENVOYER" />
       </fieldset>
-    </form>
-
-      
-
+    </form>      
+    </div>
     </section>
     <script src="script.js"></script>
   </body>

@@ -38,6 +38,7 @@
          <th>Lien Github</th>
          <th>Lien Picture</th>
          <th>lien Site</th>
+         <th>Commentaires</th>
          <th>Action</th>
       </tr>
       <?php

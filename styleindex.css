@@ -81,6 +81,12 @@ header {
   padding-bottom: 100px;
   padding-top: 100px;
 }
+.mobile{
+  display:none;
+}
+.desktop{
+  display:flex;
+}
 nav {
   border-radius: 10px;
   background-color: aliceblue;
@@ -91,6 +97,7 @@ nav {
   height: 70px;
   z-index: 10000;
 }
+
 nav ul {
   display: flex;
   justify-content: space-around;
@@ -130,7 +137,7 @@ nav ul li a {
 }
 
 .container {
-  background-color: white;
+  /* background-color: white; */
   border-radius: 100px;
 }
 .containerWork {
@@ -416,5 +423,30 @@ footer p{
 @media (max-width: 768px) {
   .container_illustration {
     display: grid;
+  }
+.mobile{
+  display:flex;
+}
+nav{
+  height:fit-content;
+}
+  .mobile a img{
+    display:flex;
+    width:60%;
+    object-fit: contain;
+  }
+  .desktop{
+    display:none;
+  }
+  .container{
+    width:65%;
+    margin-left:17%;
+  }
+  .anim{
+    font-size: 100px;
+    margin:43px;
+  }
+  h1{
+    font-size: 50px;
   }
 }

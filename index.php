@@ -27,9 +27,13 @@ echo "</script>";
   <header id="home">
     <nav>
       <ul>
-        <li><a href="#home">PORTFOLIO</a></li>
-        <li><a href="#projets">PROJETS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li class="desktop"><a href="#home">PORTFOLIO</a></li>
+        <li class="desktop"><a href="#projets">PROJETS</a></li>
+        <li class="desktop"><a href="#contact">CONTACT</a></li>
+
+        <li class="mobile"><a href="#home"><img src="./datas/logo_home.png" alt="portfolio"></a></li>
+        <li class="mobile"><a href="#projets"><img src="./datas/logo_projets.png" alt="projets"></a></li>
+        <li class="mobile"><a href="#contact"><img src="./datas/logo_contact.png" alt="contact"></a></li>
       </ul>
     </nav>
   </header>

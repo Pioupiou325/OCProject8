@@ -1,5 +1,7 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
 <?php
-
 include "connect.php";
 $req = $link->prepare("SELECT * FROM works");
 $req->execute();
@@ -8,23 +10,19 @@ echo "<script>";
 echo "const content = " . json_encode($res) . ";";
 echo "</script>";
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Je suis développeur fullstack, je crée des pages ou des sites
     web.Je peux réaliser le frontend de votre site, comme le backend.Si vous cherchez un développeur 
     pour lier votre site web avec une base de données, je réalise le front et le back ainsi que 
-    la gestion de votre base de données clients ou produits">
-    <title>Test js php</title>
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    la gestion de votre base de données clients ou produits ainsi que le déploiement">
+    <title>Pierre PICARD developpement</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleindex.css" />
-    
+    <!-- rajouter les og et cie -->
   </head>
   <header id="home">
     <nav>
@@ -72,9 +70,30 @@ echo "</script>";
 
         <input type="submit" value="ENVOYER" />
       </fieldset>
-    </form>      
+    </form> 
+    <div class="message">
+      <?php
+      if (isset($_SESSION["message"])&& !empty( $_SESSION["message"])) {
+        $message=$_SESSION["message"];
+        unset($_SESSION["message"]);
+      }else{
+
+        $message= "";
+      }
+      ?>
+  <p><?php echo $message  ?></p>    
+  </div>     
     </div>
     </section>
+    <footer>
+<p> greencode</p>
+<p>linkedin</p>
+<p>github</p>
+<p>malt</p>
+<p></p>
+<p></p>
+
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

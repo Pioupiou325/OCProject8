@@ -2,8 +2,7 @@ const projectsSection = document.getElementById("projets");
 const projectsGallery = document.getElementById("gallery");
 const user = "Pioupiou325";
 const headers = {
-  Authorization:
-    "Bearer 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",
+  Authorization: "Bearer ",
   "Content-Type": "application/json",
 };
 let content_affiche = 0;
@@ -43,10 +42,10 @@ function verif_content_affiche() {
 async function affiche_element() {
   // effacer le containerWork
   containerWork.innerHTML = "";
-  
+
   // on récupère l 'élément à afficher
   element = content[content_affiche];
-  
+
   // on crée l' image du site à afficher
   const illustration = document.createElement("img");
   illustration.src = element.lien_picture;
@@ -57,15 +56,12 @@ async function affiche_element() {
   const nomProjet = document.createElement("h4");
   nomProjet.innerHTML = element.workname;
 
-  
-
   // affichage nom du site
   containerWork.appendChild(nomProjet);
 
   // création d' un container_illustration
   container_illustration = document.createElement("div");
   container_illustration.classList.add("container_illustration");
-
 
   //  on ajoute le container pour le bloc illustration
   const bloc_illustration = document.createElement("div");
@@ -75,7 +71,7 @@ async function affiche_element() {
   containerWork.addEventListener("mouseover", mouseover);
   // affichage de l image du site
   container_illustration.appendChild(bloc_illustration);
- 
+
   containerWork.appendChild(container_illustration);
 
   //  on ajoute le container pour les commentaires
@@ -86,8 +82,6 @@ async function affiche_element() {
 
   contenu.innerHTML = element.comments.replace(/\./g, ".<br><br>");
   comments.appendChild(contenu);
-
-  
 }
 
 //  observateur de div
@@ -143,21 +137,19 @@ function show_overlay() {
   container_illustration.classList.add("animate-container_illustration");
   const commentaires = document.querySelector(".bloc_comments");
   commentaires.classList.add("animate-comments");
-  
-  recup_stats();
 
- 
+  recup_stats();
 
   container_liens = document.createElement("div");
   container_liens.classList.add("container_liens");
-  
+
   lien_git = document.createElement("a");
   lien_git.href = element.lien_github;
   logo_git = document.createElement("img");
   logo_git.src = "./datas/logo_git.png";
   lien_git.appendChild(logo_git);
   container_liens.appendChild(lien_git);
-  
+
   lien_site = document.createElement("a");
   lien_site.href = element.lien_site;
   logo_site = document.createElement("img");

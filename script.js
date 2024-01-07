@@ -134,6 +134,8 @@ function skeleton_gallery() {
 }
 
 function show_overlay() {
+  const gallery = document.getElementById("gallery");
+  gallery.classList.add("gallery_fit_content");
   containerWork.addEventListener("mouseleave", mouseleave);
   const division = document.querySelector(".bloc_illustration");
   division.classList.add("animate-illustration");
@@ -180,7 +182,7 @@ async function recup_stats() {
     for (const key in stats) {
       if (Object.prototype.hasOwnProperty.call(stats, key)) {
         tag_stats = document.createElement("div");
-        tag_stats.classList.add("container_stats");
+        tag_stats.classList.add("stats");
         const value = stats[key];
         const percentage = ((value / total) * 100).toFixed(0);
         if (key === "HTML") {
@@ -205,11 +207,11 @@ async function recup_stats() {
           tag_stats.appendChild(logo);
         } else {
           const stat = document.createElement("p");
-          stat.innerHTML += `${key}: ${percentage}%`;
+          stat.innerHTML += `${key} ${percentage}%`;
           tag_stats.appendChild(stat);
         }
         const stat = document.createElement("p");
-        stat.innerHTML += ` : ${percentage}%`;
+        stat.innerHTML += `  ${percentage}%`;
         tag_stats.appendChild(stat);
         container_stats.appendChild(tag_stats);
       }
@@ -225,6 +227,7 @@ function mouseover() {
 }
 // création d un ecouteur d evenement pour sortir de la div
 function mouseleave() {
+  gallery.classList.remove("gallery_fit_content");
   containerWork.classList.remove("animate-illustration");
   containerWork.removeEventListener("mouseleave", mouseleave);
   affiche_element();

@@ -2,7 +2,8 @@ const projectsSection = document.getElementById("projets");
 const projectsGallery = document.getElementById("gallery");
 const user = "Pioupiou325";
 const headers = {
-  Authorization: "Bearer ",
+  Authorization:
+    "Bearer ",
   "Content-Type": "application/json",
 };
 let content_affiche = 0;
@@ -53,7 +54,7 @@ async function affiche_element() {
   illustration.classList.add("illustration_gallery");
 
   // creation nom du site
-  const nomProjet = document.createElement("h4");
+  const nomProjet = document.createElement("h2");
   nomProjet.innerHTML = element.workname;
 
   // affichage nom du site
@@ -101,9 +102,11 @@ function skeleton_gallery() {
   // création des flèches du carrousel
   const arrow_left = document.createElement("img");
   arrow_left.src = "./datas/back.svg";
+  arrow_left.alt = "back";
   arrow_left.classList.add("arrows_caroussel_left");
   const arrow_right = document.createElement("img");
   arrow_right.src = "./datas/forward.svg";
+  arrow_right.alt = "forward";
   arrow_right.classList.add("arrows_caroussel_right");
 
   // mise en place de la flèche gauche dans la gallery

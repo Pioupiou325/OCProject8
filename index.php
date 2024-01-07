@@ -70,20 +70,20 @@ echo "</script>";
 
         <input type="submit" value="ENVOYER" />
       </fieldset>
-    </form> 
-    <div class="message">
-      <?php
+      <div class="message">
+        <?php
       if (isset($_SESSION["message"])&& !empty( $_SESSION["message"])) {
         $message=$_SESSION["message"];
         unset($_SESSION["message"]);
       }else{
-
+        
         $message= "";
       }
       ?>
   <p><?php echo $message  ?></p>    
-  </div>     
-    </div>
+</div>     
+</form> 
+</div>
     </section>
     <footer>
 <p> greencode</p>

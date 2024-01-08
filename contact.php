@@ -18,7 +18,7 @@ if (!empty($_POST["user_mail"]) && !empty($_POST["object"]) && !empty($_POST["de
 
     // En-têtes additionnels
     $headers[] = 'To: pierre8800@hotmail.fr';
-    $headers[] = 'From: $user_mail';
+    $headers[] = `From: $user_mail`;
 
 
     if (mail($to, $subject, $demande, $headers)) {

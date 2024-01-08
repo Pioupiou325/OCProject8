@@ -18,6 +18,7 @@ echo "</script>";
     pour lier votre site web avec une base de données, je réalise le front et le back ainsi que 
     la gestion de votre base de données clients ou produits ainsi que le déploiement">
     <title>Pierre PICARD developpement</title>
+    <link rel="icon" type="image/png" href="./datas/dev.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
@@ -45,12 +46,12 @@ echo "</script>";
     <h2>Développeur fullstack de sites Web rapides sécurisés</h2>
   </div>
   
-  <div class="presentation">
-    <p>Je réalise tous vos projets pour mettre en avant votre business.</p>
-    <p>D' une simple page vitrine au site complet de e-commerce en passant par l' amélioration du SEO 
- et/ou des performances de votre site.</p>
-    <p>Soucieux du greencode, </p>
-    </div>
+  <h3 class="presentation">
+    Je réalise tous vos projets pour mettre en avant votre business.
+    D' une simple page vitrine au site complet de e-commerce en passant par l' amélioration du SEO 
+ et/ou des performances de votre site.
+    Soucieux du greencode
+</h3>
 
     <section id="projets" class="projets">
       <h3>Mes projets</h3>

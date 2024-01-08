@@ -18,9 +18,9 @@ echo "</script>";
     pour lier votre site web avec une base de données, je réalise le front et le back ainsi que 
     la gestion de votre base de données clients ou produits ainsi que le déploiement">
     <title>Pierre PICARD developpement</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleindex.css" />
     <!-- rajouter les og et cie -->
   </head>
@@ -40,37 +40,40 @@ echo "</script>";
   <body>
   <div class="container">
     <div class="anim">
-      <p>PIERRE PICARD</p>
+      <h1>PIERRE PICARD</h1>
     </div>
+    <h2>Développeur fullstack de sites Web rapides sécurisés</h2>
   </div>
-    <div class="presentation">
-    <h1>Développeur fullstack de sites Web rapides sécurisés</h1>
-    <p>et Green Code friendly</p>  
-    
+  
+  <div class="presentation">
+    <p>Je réalise tous vos projets pour mettre en avant votre business.</p>
+    <p>D' une simple page vitrine au site complet de e-commerce en passant par l' amélioration du SEO 
+ et/ou des performances de votre site.</p>
+    <p>Soucieux du greencode, </p>
     </div>
 
     <section id="projets" class="projets">
-      <h2>Mes projets</h2>
+      <h3>Mes projets</h3>
             
       <div id="gallery" class="gallery">
       </div>  
     </section>
 
     <section id="contact" class="contact">
-      <h2>Contact</h2>
+      <h3>Contact</h3>
       <div class="form_contact">
       <form action="contact.php" method="POST" >
       <fieldset>
         <legend>Formulaire de contact</legend>
 
-        <label>Votre email</label>
-        <input type="email" name="user_mail" placeholder="Entrez votre email" />
+        <label for="email">Votre email</label>
+        <input type="email" name="user_mail" placeholder="Entrez votre email" id="email"/>
 
-        <label>Objet de la demande</label>
-        <input type="text" name="object" placeholder="objet de la demande" />
+        <label for ="object">Objet de la demande</label>
+        <input type="text" name="object" placeholder="objet de la demande" id="object"/>
 
-        <label>Votre demande</label>
-        <textarea name="demande" placeholder="Ecrivez ici"></textarea>      
+        <label for="demande">Votre demande</label>
+        <textarea name="demande" placeholder="Ecrivez ici" id="demande"></textarea>      
 
         <input type="submit" value="ENVOYER" />
       </fieldset>
@@ -90,13 +93,12 @@ echo "</script>";
 </div>
     </section>
     <footer>
-<p> greencode</p>
-<p>linkedin</p>
-<p>github</p>
-<p>malt</p>
-<p></p>
-<p></p>
-
+      <div class="liens_socials">
+        <a href="https://github.com/Pioupiou325"><img src="./datas/logo_git.png" alt="github"></a>
+        <a href="https://www.linkedin.com/in/pierre-picard-30809a297/"><img src="./datas/logo_linkedin.png" alt="linkedin"></a>
+        <a href="https://en.wikipedia.org/wiki/Green_computing"><img src="./datas/logo_greencode.png" alt="greencode"></a>
+      </div>
+      <p>Tous droits réservés @Pierre PICARD</p>
     </footer>
     <script src="script.js"></script>
   </body>

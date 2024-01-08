@@ -1,5 +1,6 @@
 const projectsSection = document.getElementById("projets");
 const projectsGallery = document.getElementById("gallery");
+const nbr_projects = content.length;
 const user = "Pioupiou325";
 const headers = {
   Authorization:
@@ -46,7 +47,12 @@ async function affiche_element() {
 
   // on récupère l 'élément à afficher
   element = content[content_affiche];
-
+  num = content_affiche + 1;
+  // classement projet/nbre de projets
+  const classement = document.createElement("p");
+  classement.classList.add("classement");  
+  classement.innerHTML = `${num} / ${nbr_projects}`;
+  containerWork.appendChild(classement);
   // on crée l' image du site à afficher
   const illustration = document.createElement("img");
   illustration.src = element.lien_picture;
@@ -54,7 +60,7 @@ async function affiche_element() {
   illustration.classList.add("illustration_gallery");
 
   // creation nom du site
-  const nomProjet = document.createElement("h2");
+  const nomProjet = document.createElement("h3");
   nomProjet.innerHTML = element.workname;
 
   // affichage nom du site
@@ -134,6 +140,8 @@ function skeleton_gallery() {
 }
 
 function show_overlay() {
+  classement = document.querySelector(".classement");
+  classement.style.display = "none";
   const gallery = document.getElementById("gallery");
   gallery.classList.add("gallery_fit_content");
   containerWork.addEventListener("mouseleave", mouseleave);
@@ -188,21 +196,25 @@ async function recup_stats() {
         if (key === "HTML") {
           const logo = document.createElement("img");
           logo.src = "./datas/logo_html.png";
+          logo.alt = "logo html";
           logo.classList.add("logo_in_work");
           tag_stats.appendChild(logo);
         } else if (key === "CSS") {
           const logo = document.createElement("img");
           logo.src = "./datas/logo_css.png";
+          logo.alt = "logo css";
           logo.classList.add("logo_in_work");
           tag_stats.appendChild(logo);
         } else if (key === "SCSS") {
           const logo = document.createElement("img");
           logo.src = "./datas/logo_sass.png";
+          logo.alt = "logo sass";
           logo.classList.add("logo_in_work");
           tag_stats.appendChild(logo);
         } else if (key === "JavaScript") {
           const logo = document.createElement("img");
           logo.src = "./datas/logo_js.webp";
+          logo.alt = "logo js";
           logo.classList.add("logo_in_work");
           tag_stats.appendChild(logo);
         } else {

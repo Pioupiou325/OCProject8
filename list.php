@@ -13,7 +13,7 @@
          <ul>
             <li><a href="/portfolio/form.php">Admin</a></li>
             <li><a href="/portfolio/list.php">Portfolio</a></li>
-            <li><a href="">Contact</a></li>
+            
          </ul>
       </nav>
    </header>
@@ -39,7 +39,7 @@
          <th>Lien Picture</th>
          <th>lien Site</th>
          <th>Commentaires</th>
-         <th>Action</th>
+         <th>Supprimer</th>
       </tr>
       <?php
       include "connect.php";
@@ -53,9 +53,7 @@
             foreach ($value as $v) {
                echo "<td>$v</td>";
             }
-            // Ajout du lien d edition pour chaque projet avec son ID
-            echo "<td><a href='modify.php?id={$value['idworks']}'><img src='./datas/edit.png' width=10px alt='Modifier' /></a></td>";
-
+            
             // Ajout du lien de suppression pour chaque projet avec son ID
             echo "<td><a href='delete.php?id={$value['idworks']}'><img src='./datas/cross.webp' width=10px alt='Supprimer' /></a></td>";
             echo "</tr>";

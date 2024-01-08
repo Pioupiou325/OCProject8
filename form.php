@@ -13,8 +13,7 @@
         <ul>
           <li><a href="/portfolio/form.php">Admin</a></li>
           <li><a href="/portfolio/list.php">Portfolio</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
+          </ul>
       </nav>
     </header>
     <div class="message">

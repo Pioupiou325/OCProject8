@@ -50,7 +50,7 @@ async function affiche_element() {
   num = content_affiche + 1;
   // classement projet/nbre de projets
   const classement = document.createElement("p");
-  classement.classList.add("classement");  
+  classement.classList.add("classement");
   classement.innerHTML = `${num} / ${nbr_projects}`;
   containerWork.appendChild(classement);
   // on crée l' image du site à afficher

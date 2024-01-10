@@ -1,11 +1,21 @@
-<?php session_start(); ?>
+
+<?php session_start();
+
+if ($_SESSION["token"] != 1234){
+  echo ($_SESSION["token"]);
+  $message = "Accès interdit sans identifiants";
+  $_SESSION["message"] = $message;
+  header("location:/portfolio/login.php");
+}
+  
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Liste des projets</title>
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="styleadmin.css">
 </head>
 <body>
    <header>

@@ -1,10 +1,20 @@
-<?php session_start(); ?>
+<?php session_start();
+
+if ($_SESSION["token"] != 1234){
+  echo ($_SESSION["token"]);
+  $message = "Accès interdit sans identifiants";
+  $_SESSION["message"] = $message;
+  header("location:/portfolio/login.php");
+} else {
+  
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleadmin.css" />
     <title>Portfolio_test</title>
   </head>
   <body>
@@ -18,16 +28,16 @@
     </header>
     <div class="message">
       <?php
-      if (isset($_SESSION["message"])&& !empty( $_SESSION["message"])) {
-        $message=$_SESSION["message"];
+      if (isset($_SESSION["message"]) && !empty($_SESSION["message"])) {
+        $message = $_SESSION["message"];
         unset($_SESSION["message"]);
-      }else{
+      } else {
 
-        $message= "";
+        $message = "";
       }
       ?>
 
-  <p><?php echo $message  ?></p>    
+  <p><?php echo $message ?></p>    
   </div>
     <form action="insert.php" method="POST" enctype="multipart/form-data">
       <fieldset>
@@ -53,3 +63,6 @@
     </form>
   </body>
 </html>
+<?php
+}
+?>

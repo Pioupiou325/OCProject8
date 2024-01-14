@@ -8,6 +8,8 @@ const headers = {
   "Content-Type": "application/json",
 };
 let content_affiche = 0;
+let content_affiche_before;
+let content_affiche_after;
 
 async function afficherStatsGit(nameGit) {
   const url = `https://api.github.com/repos/${user}/${nameGit}/languages`;
@@ -39,6 +41,22 @@ function verif_content_affiche() {
   if (content_affiche < 0) {
     content_affiche = content.length - 1;
   }
+
+  content_affiche_before = content_affiche - 1;
+  if (content_affiche_before > content.length - 1) {
+    content_affiche_before = 0;
+  }
+  if (content_affiche_before < 0) {
+    content_affiche_before = content.length - 1;
+  }
+  content_affiche_after = content_affiche + 1;
+  if (content_affiche_after > content.length - 1) {
+    content_affiche_after = 0;
+  }
+  if (content_affiche_after < 0) {
+    content_affiche_after = content.length - 1;
+  }
+  console.log(content_affiche_before, content_affiche, content_affiche_after);
 }
 
 async function affiche_element() {
@@ -47,6 +65,10 @@ async function affiche_element() {
 
   // on récupère l 'élément à afficher
   element = content[content_affiche];
+  element_before = content[content_affiche_before];
+  element_after = content[content_affiche_after];
+
+  
   num = content_affiche + 1;
   // classement projet/nbre de projets
   const classement = document.createElement("p");
@@ -57,7 +79,24 @@ async function affiche_element() {
   const illustration = document.createElement("img");
   illustration.src = element.lien_picture;
   illustration.alt = element.workname;
-  illustration.classList.add("illustration_gallery");
+  const screen_image = document.createElement("div");
+  screen_image.classList.add("screen_image");
+  screen_image.appendChild(illustration);
+  // on crée l' image before du site à afficher
+  const illustration_before = document.createElement("img");
+  illustration_before.src = element_before.lien_picture;
+  illustration_before.alt = element_before.workname;
+  const screen_image_before = document.createElement("div");
+  screen_image_before.classList.add("screen_image_before");
+  screen_image_before.appendChild(illustration_before);
+  // on crée l' image after du site à afficher
+  const illustration_after = document.createElement("img");
+  illustration_after.src = element_after.lien_picture;
+  illustration_after.alt = element_after.workname;
+  const screen_image_after = document.createElement("div");
+  screen_image_after.classList.add("screen_image_after");
+  screen_image_after.appendChild(illustration_after);
+  
 
   // creation nom du site
   const nomProjet = document.createElement("h3");
@@ -74,7 +113,9 @@ async function affiche_element() {
   const bloc_illustration = document.createElement("div");
   bloc_illustration.classList.add("bloc_illustration");
   container_illustration.appendChild(bloc_illustration);
-  bloc_illustration.appendChild(illustration);
+  bloc_illustration.appendChild(screen_image_before);
+  bloc_illustration.appendChild(screen_image);
+  bloc_illustration.appendChild(screen_image_after);
   containerWork.addEventListener("mouseover", mouseover);
   // affichage de l image du site
   container_illustration.appendChild(bloc_illustration);
@@ -88,6 +129,7 @@ async function affiche_element() {
   const contenu = document.createElement("p");
 
   contenu.innerHTML = element.comments.replace(/\./g, ".<br><br>");
+  
   comments.appendChild(contenu);
 }
 
@@ -142,11 +184,18 @@ function skeleton_gallery() {
 function show_overlay() {
   classement = document.querySelector(".classement");
   classement.style.display = "none";
+  const screen_image_before = document.querySelector(".screen_image_before");
+  const screen_image_after = document.querySelector(".screen_image_after");
+  const screen_image = document.querySelector(".screen_image");
+
+  screen_image_before.style.display = "none";
+  screen_image_after.style.display = "none";
   const gallery = document.getElementById("gallery");
   gallery.classList.add("gallery_fit_content");
   containerWork.addEventListener("mouseleave", mouseleave);
   const division = document.querySelector(".bloc_illustration");
   division.classList.add("animate-illustration");
+  // screen_image.add("animate-illustartion");
   container_illustration.classList.add("animate-container_illustration");
   const commentaires = document.querySelector(".bloc_comments");
   commentaires.classList.add("animate-comments");
@@ -168,6 +217,7 @@ function show_overlay() {
   logo_site = document.createElement("img");
   logo_site.src = "./datas/logo_lien.png";
   lien_site.appendChild(logo_site);
+
   container_liens.appendChild(lien_site);
 
   commentaires.appendChild(container_liens);
@@ -244,7 +294,7 @@ function mouseleave() {
   containerWork.removeEventListener("mouseleave", mouseleave);
   affiche_element();
 }
-
+verif_content_affiche();
 observer.observe(projectsSection);
 skeleton_gallery();
 affiche_element();

@@ -16,24 +16,24 @@ if (!empty($_POST["user_mail"]) && !empty($_POST["object"]) && !empty($_POST["de
     $headers[] = 'MIME-Version: 1.0';
     $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
-    // En-têtes additionnels
+    
     $headers[] = 'To: pierre8800@hotmail.fr';
-    $headers[] = `From: $user_mail`;
+    
 
 
-    if (mail($to, $subject, $demande, $headers)) {
+    if (mail($to, $subject, $user_mail."   -   ".$demande, $headers)) {
 
-        $message="Votre demande a été envoyé et sera traitée dans les plus brefs délais";
+        $message="Votre demande a été envoyée et sera traitée dans les plus brefs délais";
         $_SESSION["message"] = $message;
-        header("location:/portfolio/index.php#contact");
+        header("location:/index.php#contact");
     } else {
         $message = "Votre demande n' a pas pu être envoyée, veuillez essayer un peu plus tard";
         $_SESSION["message"] = $message;
-        header("location:/portfolio/index.php#contact");
+        header("location:/index.php#contact");
     }
 }else{
     $message = "Veuillez remplir tous les champs";
     $_SESSION["message"] = $message;
-    header("location:/portfolio/index.php#contact");
+    header("location:/index.php#contact");
 
 }

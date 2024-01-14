@@ -1,6 +1,6 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
+<?php session_start(); ?>
 <?php
 include "connect.php";
 $req = $link->prepare("SELECT * FROM works");
@@ -17,8 +17,9 @@ echo "</script>";
     web.Je peux réaliser le frontend de votre site, comme le backend.Si vous cherchez un développeur 
     pour lier votre site web avec une base de données, je réalise le front et le back ainsi que 
     la gestion de votre base de données clients ou produits ainsi que le déploiement">
-    <title>Pierre PICARD developpement</title>
-    <link rel="icon" type="image/png" href="./datas/dev.png" />
+    <title>Pierre PICARD developpement</title>    
+    <link rel="icon" href="/portfolio/favicon.ico" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
@@ -47,10 +48,11 @@ echo "</script>";
   </div>
   
   <h3 class="presentation">
-    Je réalise tous vos projets pour mettre en avant votre business.
+    Je réalise tous vos projets pour mettre en avant votre business.<br>
     D' une simple page vitrine au site complet de e-commerce en passant par l' amélioration du SEO 
- et/ou des performances de votre site.
-    Soucieux du greencode
+ et/ou des performances de votre site.<br>
+ Votre site sera développé en suivant les bonnes pratiques du Green Code.<br>
+ N' hésitez pas à me faire part de toutes vos demandes.
 </h3>
 
     <section id="projets" class="projets">

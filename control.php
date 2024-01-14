@@ -8,7 +8,7 @@ $pass = $_POST["mot_de_passe"];
 
 
    if (($name === "paul") && ($pass === "paul40")) {
-      $token = 1234;
+      $token = "gdjsgshjk";
       $_SESSION["token"] = $token;
       header("location:/portfolio/form.php");
    }else{

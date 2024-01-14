@@ -1,6 +1,6 @@
 <?php session_start();
 
-if ($_SESSION["token"] != 1234){
+if ($_SESSION["token"] != "gdjsgshjk"){
   echo ($_SESSION["token"]);
   $message = "Accès interdit sans identifiants";
   $_SESSION["message"] = $message;

@@ -56,25 +56,26 @@ function verif_content_affiche() {
   if (content_affiche_after < 0) {
     content_affiche_after = content.length - 1;
   }
-  console.log(content_affiche_before, content_affiche, content_affiche_after);
-}
-
-async function affiche_element() {
-  // effacer le containerWork
-  containerWork.innerHTML = "";
 
   // on récupère l 'élément à afficher
   element = content[content_affiche];
   element_before = content[content_affiche_before];
   element_after = content[content_affiche_after];
+}
 
-  
-  num = content_affiche + 1;
-  // classement projet/nbre de projets
-  const classement = document.createElement("p");
-  classement.classList.add("classement");
-  classement.innerHTML = `${num} / ${nbr_projects}`;
-  containerWork.appendChild(classement);
+async function affiche_element() {
+  // effacer le containerWork
+  containerWork.innerHTML = "";
+  //effacer les 2 fleches
+  const screen_image_before = document.querySelector(".screen_image_before");
+  const screen_image_after = document.querySelector(".screen_image_after");
+  screen_image_before.innerHTML = "";
+  screen_image_after.innerHTML = "";
+  screen_image_before.src = element_before.lien_picture;
+  screen_image_after.src = element_after.lien_picture;
+  gallery.innerHTML = "";
+  skeleton_gallery();
+
   // on crée l' image du site à afficher
   const illustration = document.createElement("img");
   illustration.src = element.lien_picture;
@@ -82,21 +83,6 @@ async function affiche_element() {
   const screen_image = document.createElement("div");
   screen_image.classList.add("screen_image");
   screen_image.appendChild(illustration);
-  // on crée l' image before du site à afficher
-  const illustration_before = document.createElement("img");
-  illustration_before.src = element_before.lien_picture;
-  illustration_before.alt = element_before.workname;
-  const screen_image_before = document.createElement("div");
-  screen_image_before.classList.add("screen_image_before");
-  screen_image_before.appendChild(illustration_before);
-  // on crée l' image after du site à afficher
-  const illustration_after = document.createElement("img");
-  illustration_after.src = element_after.lien_picture;
-  illustration_after.alt = element_after.workname;
-  const screen_image_after = document.createElement("div");
-  screen_image_after.classList.add("screen_image_after");
-  screen_image_after.appendChild(illustration_after);
-  
 
   // creation nom du site
   const nomProjet = document.createElement("h3");
@@ -113,15 +99,19 @@ async function affiche_element() {
   const bloc_illustration = document.createElement("div");
   bloc_illustration.classList.add("bloc_illustration");
   container_illustration.appendChild(bloc_illustration);
-  bloc_illustration.appendChild(screen_image_before);
   bloc_illustration.appendChild(screen_image);
-  bloc_illustration.appendChild(screen_image_after);
+
   containerWork.addEventListener("mouseover", mouseover);
   // affichage de l image du site
   container_illustration.appendChild(bloc_illustration);
 
   containerWork.appendChild(container_illustration);
-
+  num = content_affiche + 1;
+  // classement projet/nbre de projets
+  const classement = document.createElement("p");
+  classement.classList.add("classement");
+  classement.innerHTML = `projet n° ${num} / ${nbr_projects}`;
+  containerWork.appendChild(classement);
   //  on ajoute le container pour les commentaires
   const comments = document.createElement("div");
   comments.classList.add("bloc_comments");
@@ -129,7 +119,7 @@ async function affiche_element() {
   const contenu = document.createElement("p");
 
   contenu.innerHTML = element.comments.replace(/\./g, ".<br><br>");
-  
+
   comments.appendChild(contenu);
 }
 
@@ -147,34 +137,36 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 function skeleton_gallery() {
-  // création des flèches du carrousel
-  const arrow_left = document.createElement("img");
-  arrow_left.src = "./datas/back.svg";
-  arrow_left.alt = "back";
-  arrow_left.classList.add("arrows_caroussel_left");
-  const arrow_right = document.createElement("img");
-  arrow_right.src = "./datas/forward.svg";
-  arrow_right.alt = "forward";
-  arrow_right.classList.add("arrows_caroussel_right");
-
-  // mise en place de la flèche gauche dans la gallery
-  gallery.appendChild(arrow_left);
+  // on crée l' image before du site à afficher
+  const illustration_before = document.createElement("img");
+  illustration_before.src = element_before.lien_picture;
+  illustration_before.alt = element_before.workname;
+  const screen_image_before = document.createElement("div");
+  screen_image_before.classList.add("screen_image_before");
+  screen_image_before.appendChild(illustration_before);
+  gallery.appendChild(screen_image_before);
 
   // création et mise en place du containerWork dans la gallery
   containerWork = document.createElement("div");
   containerWork.classList.add("containerWork");
   gallery.appendChild(containerWork);
 
-  // mise en place de la flèche droite dans la gallery
-  gallery.appendChild(arrow_right);
+  // on crée l' image after du site à afficher
+  const illustration_after = document.createElement("img");
+  illustration_after.src = element_after.lien_picture;
+  illustration_after.alt = element_after.workname;
+  const screen_image_after = document.createElement("div");
+  screen_image_after.classList.add("screen_image_after");
+  screen_image_after.appendChild(illustration_after);
+  gallery.appendChild(screen_image_after);
 
   // mise en route des écouteurs d évenements pour les 2 flèches de la galerie
-  arrow_left.addEventListener("click", () => {
+  screen_image_before.addEventListener("click", () => {
     content_affiche -= 1;
     verif_content_affiche();
     affiche_element();
   });
-  arrow_right.addEventListener("click", () => {
+  screen_image_after.addEventListener("click", () => {
     content_affiche += 1;
     verif_content_affiche();
     affiche_element();
@@ -184,18 +176,12 @@ function skeleton_gallery() {
 function show_overlay() {
   classement = document.querySelector(".classement");
   classement.style.display = "none";
-  const screen_image_before = document.querySelector(".screen_image_before");
-  const screen_image_after = document.querySelector(".screen_image_after");
-  const screen_image = document.querySelector(".screen_image");
-
-  screen_image_before.style.display = "none";
-  screen_image_after.style.display = "none";
   const gallery = document.getElementById("gallery");
   gallery.classList.add("gallery_fit_content");
   containerWork.addEventListener("mouseleave", mouseleave);
   const division = document.querySelector(".bloc_illustration");
   division.classList.add("animate-illustration");
-  // screen_image.add("animate-illustartion");
+
   container_illustration.classList.add("animate-container_illustration");
   const commentaires = document.querySelector(".bloc_comments");
   commentaires.classList.add("animate-comments");

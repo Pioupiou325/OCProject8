@@ -18,6 +18,7 @@ if (!empty($_POST["user_mail"]) && !empty($_POST["object"]) && !empty($_POST["de
 
     
     $headers[] = 'To: pierre8800@hotmail.fr';
+    $headers[] = 'Reply-To: $user_mail';
     
 
 

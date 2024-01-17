@@ -13,6 +13,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "image": [
+          "https://pierrepicarddev.fr/images/laptop.jpg"
+        ],
+        "name": "Pierre PICARD",
+        "telephone": "06 51 81 30 86",
+        "priceRange": "sur devis",
+        "openingHours": "Lu,Ma,Me,Je,Ve 9:00-18:00",
+        "url": "https://pioupiou325.github.io/OCProject_5/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "135 route de Bordeaux",
+          "addressLocality": "La Couronne",
+          "postalCode": "16400",
+          "addressCountry": "FR"
+        }
+      }
+    </script>
     <meta property="og:title" content="Pierre PICARD developpement" />
     <meta property="og:description" content="Je suis développeur fullstack, je crée des pages ou des sites
     web.Je peux réaliser le frontend de votre site, comme le backend.Si vous cherchez un développeur 
@@ -20,7 +41,8 @@
     la gestion de votre base de données clients ou produits ainsi que le déploiement" />
     <meta property="og:image" content="https://pierrepicarddev.fr/images/laptop.jpg" />
     <meta property="og:url" content="https://pierrepicarddev.fr" />
-    <?php session_start(); ?>
+    <?php   
+    session_start(); ?>
     <?php
 include "connect.php";
 $req = $link->prepare("SELECT * FROM works");
@@ -54,9 +76,15 @@ echo "</script>";
   </div>
   
   <h3 class="presentation">
-  Je suis là pour concrétiser tous vos projets et donner une visibilité exceptionnelle à votre entreprise en ligne.<br>
-   Que vous ayez besoin d'une simple page vitrine, d'un site de e-commerce complet, ou encore d'améliorer le référencement (SEO) et les performances de votre site, je suis prêt à répondre à toutes vos demandes.<br>
-    Mon engagement envers le développement respectueux de l'environnement se reflète dans l'adoption des bonnes pratiques du Green Code.<br>
+  Je suis là pour concrétiser tous vos projets et donner une visibilité exceptionnelle
+   à votre entreprise en ligne.<br>
+   Que vous ayez besoin d'une simple page vitrine, d'un site de e-commerce complet,
+    ou encore d'améliorer le référencement
+    (SEO) et les performances de votre site, je suis prêt à répondre à toutes vos demandes.<br>
+   De plus, je suis diplômé du parcours "Développeur Web" d'OpenClassrooms, ce qui renforce 
+   mes compétences dans le domaine du développement web.<br>
+    Mon engagement envers le développement respectueux de l'environnement se reflète 
+    dans l'adoption des bonnes pratiques du Green Code.<br>
   N'hésitez pas à partager vos besoins, je suis là pour créer la solution parfaite pour vous.<br>Je suis là pour vous accompagner dès le début de votre projet jusqu'à sa mise en ligne et son hébergement final.
 </h3>
 
@@ -99,13 +127,13 @@ echo "</script>";
         <legend>Formulaire de contact</legend>
 
         <label for="email">Votre email</label>
-        <input type="email" name="user_mail" placeholder="Entrez votre email" id="email"/>
+        <input type="email" name="user_mail" placeholder="Entrez votre email" id="email" autocomplete="email"/>
 
         <label for ="object">Objet de la demande</label>
-        <input type="text" name="object" placeholder="objet de la demande" id="object"/>
+        <input type="text" name="object" placeholder="objet de la demande" id="object" autocomplete="object"/>
 
         <label for="demande">Votre demande</label>
-        <textarea name="demande" placeholder="Ecrivez ici" id="demande"></textarea>      
+        <textarea name="demande" placeholder="Ecrivez ici" id="demande" autocomplete="demande"></textarea>      
 
         <input type="submit" value="ENVOYER" />
       </fieldset>

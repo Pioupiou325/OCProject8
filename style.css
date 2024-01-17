@@ -624,11 +624,19 @@ footer img {
     margin-right: 10px;
     margin-left: 10px;
   }
+  .gallery{
+    margin-left: 0;
+    width: 100%;
+  }
   .containerWork h3 {
     height: 10%;
   }
   .container_illustration {
     display: grid;
+  }
+  .bloc_comments p{
+    
+    width:86%;
   }
   .animate-comments {
     width: 100%;
@@ -738,8 +746,7 @@ footer img {
     margin: 5px;
   }
   .gallery {
-    margin-left: 0;
-    width: 100%;
+    
     border: none;
   }
   .containerWork h3 {
@@ -780,8 +787,4 @@ footer img {
     justify-content: center;
   }
 }
-@media (max-width: 620px) {
-  .screen_image {
-    width: 90%;
-  }
-}
+

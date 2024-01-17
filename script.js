@@ -117,9 +117,7 @@ async function affiche_element() {
   comments.classList.add("bloc_comments");
   container_illustration.appendChild(comments);
   const contenu = document.createElement("p");
-
   contenu.innerHTML = element.comments.replace(/\./g, ".<br><br>");
-
   comments.appendChild(contenu);
 }
 
@@ -174,14 +172,19 @@ function skeleton_gallery() {
 }
 
 function show_overlay() {
+  // on efface le classement projet x/y
   classement = document.querySelector(".classement");
   classement.style.display = "none";
+  // on ajoute la classe gallery_fit_content
   const gallery = document.getElementById("gallery");
   gallery.classList.add("gallery_fit_content");
+
+  // on lance les 2 animations
+  // Animation photo qui se réduit et se déplace
   containerWork.addEventListener("mouseleave", mouseleave);
   const division = document.querySelector(".bloc_illustration");
   division.classList.add("animate-illustration");
-
+  // animation de l apparition du bloc commentaires
   container_illustration.classList.add("animate-container_illustration");
   const commentaires = document.querySelector(".bloc_comments");
   commentaires.classList.add("animate-comments");

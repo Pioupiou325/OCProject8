@@ -142,7 +142,7 @@ function skeleton_gallery() {
   const illustration_before = document.createElement("img");
   illustration_before.src = element_before.lien_picture;
   illustration_before.alt = element_before.workname;
-  const screen_image_before = document.createElement("div");
+  const screen_image_before = document.createElement("button");
   screen_image_before.classList.add("screen_image_before");
   screen_image_before.appendChild(illustration_before);
   gallery.appendChild(screen_image_before);
@@ -156,7 +156,7 @@ function skeleton_gallery() {
   const illustration_after = document.createElement("img");
   illustration_after.src = element_after.lien_picture;
   illustration_after.alt = element_after.workname;
-  const screen_image_after = document.createElement("div");
+  const screen_image_after = document.createElement("button");
   screen_image_after.classList.add("screen_image_after");
   screen_image_after.appendChild(illustration_after);
   gallery.appendChild(screen_image_after);

@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   font-family: "Montserrat", sans-serif;
-  
 }
 
 body {
@@ -537,7 +536,7 @@ img {
   margin-top: 0;
   margin-bottom: 0;
 }
-form {
+.form_contact {
   display: flex;
   flex-direction: column;
   margin: 200px;
@@ -620,11 +619,11 @@ footer img {
     margin-left: 5px;
     margin-right: 5px;
   }
-  form {
+  .form_contact {
     margin-right: 10px;
     margin-left: 10px;
   }
-  .gallery{
+  .gallery {
     margin-left: 0;
     width: 100%;
   }
@@ -634,9 +633,8 @@ footer img {
   .container_illustration {
     display: grid;
   }
-  .bloc_comments p{
-    
-    width:86%;
+  .bloc_comments p {
+    width: 86%;
   }
   .animate-comments {
     width: 100%;
@@ -665,12 +663,6 @@ footer img {
   }
   .bloc_illustration {
     height: fit-content;
-  }
-
-  .container_stats {
-    margin-top: 10px;
-    height: fit-content;
-    width: 100%;
   }
   .container_liens {
     width: 100%;
@@ -742,11 +734,10 @@ footer img {
   .containerWork p {
     font-size: 14px;
   }
-  form {
+  .form_contact {
     margin: 5px;
   }
   .gallery {
-    
     border: none;
   }
   .containerWork h3 {
@@ -787,4 +778,3 @@ footer img {
     justify-content: center;
   }
 }
-

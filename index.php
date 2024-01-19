@@ -100,6 +100,7 @@ echo "</script>";
 <div class="competences">
         <img src="./datas/logo_html.png" alt="html">
         <img src="./datas/logo_css.png" alt="css">
+        <img src="./datas/logo_sass.png" alt="sass">
         <img src="./datas/logo_js.webp" alt="js">  
         <img src="./datas/logo_nodejs.png" alt="nodejs">      
         <img src="./datas/logo_mongodb.png" alt="mongo">
@@ -110,6 +111,7 @@ echo "</script>";
 <div class="competences">
         <img src="./datas/logo_html.png" alt="html">
         <img src="./datas/logo_css.png" alt="css">
+        <img src="./datas/logo_sass.png" alt="sass">
         <img src="./datas/logo_js.webp" alt="js">   
         <img src="./datas/logo_nodejs.png" alt="nodejs">       
         <img src="./datas/logo_mongodb.png" alt="mongo">

@@ -77,15 +77,15 @@ echo "</script>";
   
   <h3 class="presentation">
   Je suis là pour concrétiser tous vos projets et donner une visibilité exceptionnelle
-   à votre entreprise en ligne.<br>
+   à votre entreprise en ligne.<hr>
    Que vous ayez besoin d'une simple page vitrine, d'un site de e-commerce complet,
     ou encore d'améliorer le référencement
-    (SEO) et les performances de votre site, je suis prêt à répondre à toutes vos demandes.<br>
+    (SEO) et les performances de votre site, je suis prêt à répondre à toutes vos demandes.<hr>
    De plus, je suis diplômé du parcours "Développeur Web" d'OpenClassrooms, ce qui renforce 
-   mes compétences dans le domaine du développement web.<br>
+   mes compétences dans le domaine du développement web.<hr>
     Mon engagement envers le développement respectueux de l'environnement se reflète 
-    dans l'adoption des bonnes pratiques du Green Code.<br>
-  N'hésitez pas à partager vos besoins, je suis là pour créer la solution parfaite pour vous.<br>Je suis là pour vous accompagner dès le début de votre projet jusqu'à sa mise en ligne et son hébergement final.
+    dans l'adoption des bonnes pratiques du Green Code.<hr>
+  N'hésitez pas à partager vos besoins, je suis là pour créer la solution parfaite pour vous.<hr>Je suis là pour vous accompagner dès le début de votre projet jusqu'à sa mise en ligne et son hébergement final.
 </h3>
 
     <section id="projets" class="projets">

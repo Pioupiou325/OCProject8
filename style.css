@@ -138,7 +138,7 @@ nav ul li a {
   animation: fadein 3s ease 2s 1 normal forwards;
 }
 
-.presentation br {
+.presentation hr {
   content: "";
   display: grid;
   border-bottom: 2px solid violet;

@@ -72,7 +72,10 @@ async function affiche_element() {
   screen_image_before.innerHTML = "";
   screen_image_after.innerHTML = "";
   screen_image_before.src = element_before.lien_picture;
+  screen_image_before.alt = "flèche gauche";
+
   screen_image_after.src = element_after.lien_picture;
+  screen_image_after.alt = "flèche droite";
   gallery.innerHTML = "";
   skeleton_gallery();
 

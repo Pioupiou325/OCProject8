@@ -199,6 +199,7 @@ function show_overlay() {
 
   lien_git = document.createElement("a");
   lien_git.href = element.lien_github;
+  lien_git.setAttribute("target", "_blank");
   logo_git = document.createElement("img");
   logo_git.src = "./datas/logo_git.png";
   lien_git.appendChild(logo_git);
@@ -206,6 +207,7 @@ function show_overlay() {
 
   lien_site = document.createElement("a");
   lien_site.href = element.lien_site;
+  lien_site.setAttribute("target", "_blank");
   logo_site = document.createElement("img");
   logo_site.src = "./datas/logo_lien.png";
   lien_site.appendChild(logo_site);

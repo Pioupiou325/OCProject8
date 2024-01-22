@@ -90,6 +90,11 @@ header {
   padding-left: 0;
   padding-right: 0;
 }
+#contact,
+#projets {
+  margin-top: -120px;
+  padding-top: 120px;
+}
 .mobile {
   display: none;
 }
@@ -172,7 +177,7 @@ nav ul li a {
   border: 5px solid #5d2061;
   border-radius: 20px;
   margin-top: 50px;
-  margin-bottom: 150px;
+  margin-bottom: 350px;
   background-color: azure;
 }
 .classement {
@@ -364,6 +369,7 @@ nav ul li a {
   display: grid;
   gap: 50px;
   overflow: hidden;
+  margin-bottom: 200px;
 }
 
 .competences {

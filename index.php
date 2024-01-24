@@ -9,10 +9,10 @@
     la gestion de votre base de données clients ou produits ainsi que le déploiement">
     <title>Pierre PICARD developpement</title>    
     <link rel="icon" href="favicon.ico" />    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -127,7 +127,7 @@ echo "</script>";
 <p>  
 Amélioration SEO & performances de votre site
 </p>
-<img src="./datas/seo.png" alt="seo">
+<img src="./datas/seo.jpg" alt="seo">
 </div>
 <div class="service">
   <p>Création de votre site complet</p>
@@ -140,7 +140,7 @@ Amélioration SEO & performances de votre site
 
 </div>
   <div class="service"><p>Maintenance</p>
-  <img src="./datas/maintenance.jpeg" alt="maintenance">
+  <img src="./datas/maintenance.jpg" alt="maintenance">
   </div>
 
 

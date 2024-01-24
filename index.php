@@ -121,6 +121,36 @@ echo "</script>";
       </div>       
       </div>
 </section>
+<section id="services" class=services>
+  <div class="cards_services">
+<div class="service">
+<p>  
+Amélioration SEO & performances de votre site
+</p>
+<img src="./datas/seo.png" alt="seo">
+</div>
+<div class="service">
+  <p>Création de votre site complet</p>
+  <img src="./datas/laptop.jpg" alt="laptop">
+
+</div>
+  <div class="service">
+    <p>Hébergement</p>
+  <img src="./datas/serveurs.jpg" alt="serveurs">
+
+</div>
+  <div class="service"><p>Maintenance</p>
+  <img src="./datas/maintenance.jpeg" alt="maintenance">
+  </div>
+
+
+  </div>
+
+</section>
+
+
+
+
     <section id="contact" class="contact">
       <h3>Contact</h3>
       <div class="form_contact">

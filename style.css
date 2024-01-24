@@ -542,6 +542,41 @@ img {
   margin-top: 0;
   margin-bottom: 0;
 }
+#services {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 300px;
+}
+#services img{
+  object-fit: cover;
+  overflow: hidden;
+  margin:0;
+  border-radius: 50%;
+}
+#services p{
+  -webkit-text-stroke: 2px red;
+  color:white;
+}
+.cards_services {
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.service {
+  overflow: hidden;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 35%; 
+  border: 5px solid #5d2061;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  background-color: white;
+}
+
 .form_contact {
   display: flex;
   flex-direction: column;
@@ -782,5 +817,12 @@ footer img {
   .liens_socials a {
     display: flex;
     justify-content: center;
+  }
+  #services{
+    flex-direction: column;
+  }
+  
+  .cards_services, .service{
+    width:100%;
   }
 }

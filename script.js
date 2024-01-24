@@ -3,8 +3,7 @@ const projectsGallery = document.getElementById("gallery");
 const nbr_projects = content.length;
 const user = "Pioupiou325";
 const headers = {
-  Authorization:
-    "Bearer ",
+  Authorization: "Bearer ",
   "Content-Type": "application/json",
 };
 let content_affiche = 0;
@@ -202,6 +201,7 @@ function show_overlay() {
   lien_git.setAttribute("target", "_blank");
   logo_git = document.createElement("img");
   logo_git.src = "./datas/logo_git.png";
+  logo_git.alt = "lien_git";
   lien_git.appendChild(logo_git);
   container_liens.appendChild(lien_git);
 
@@ -210,6 +210,7 @@ function show_overlay() {
   lien_site.setAttribute("target", "_blank");
   logo_site = document.createElement("img");
   logo_site.src = "./datas/logo_lien.png";
+  logo_site.alt = "lien_site";
   lien_site.appendChild(logo_site);
 
   container_liens.appendChild(lien_site);

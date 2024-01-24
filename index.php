@@ -9,10 +9,7 @@
     la gestion de votre base de données clients ou produits ainsi que le déploiement">
     <title>Pierre PICARD developpement</title>    
     <link rel="icon" href="favicon.ico" />    
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />    
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

@@ -7,7 +7,15 @@
     web.Je peux réaliser le frontend de votre site, comme le backend.Si vous cherchez un développeur 
     pour lier votre site web avec une base de données, je réalise le front et le back ainsi que 
     la gestion de votre base de données clients ou produits ainsi que le déploiement">
-    <title>Pierre PICARD developpement</title>    
+    <title>Pierre PICARD - Développeur Fullstack</title>  
+    <meta name="description" content="Développeur fullstack, spécialisé dans la création de sites web. Je propose des services de développement frontend et backend, gestion de bases de données, et déploiement.">
+    <meta name="keywords" content="développeur, fullstack, freelance, sites web, sites internet, frontend, backend, bases de données, hébergement, déploiement,
+     Roullet, Angoulême, La Couronne, Charente">
+    <meta name="author" content="Pierre PICARD">
+    <meta property="og:title" content="Pierre PICARD - Développeur Fullstack" />
+    <meta property="og:description" content="Développeur fullstack, spécialisé dans la création de sites web. Je propose des services de développement frontend et backend, gestion de bases de données, et déploiement." />
+    <meta property="og:image" content="https://pierrepicarddev.fr/images/laptop.jpg" />
+    <meta property="og:url" content="https://pierrepicarddev.fr" />
     <link rel="icon" href="favicon.ico" />    
     <link rel="stylesheet" href="style.css" />    
     <script type="application/ld+json">
@@ -24,20 +32,13 @@
         "url": "https://pioupiou325.github.io/OCProject_5/",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "135 route de Bordeaux",
-          "addressLocality": "La Couronne",
-          "postalCode": "16400",
+          "streetAddress": "route des barbots",
+          "addressLocality": "Roullet saint estèphe",
+          "postalCode": "16440",
           "addressCountry": "FR"
         }
       }
-    </script>
-    <meta property="og:title" content="Pierre PICARD developpement" />
-    <meta property="og:description" content="Je suis développeur fullstack, je crée des pages ou des sites
-    web.Je peux réaliser le frontend de votre site, comme le backend.Si vous cherchez un développeur 
-    pour lier votre site web avec une base de données, je réalise le front et le back ainsi que 
-    la gestion de votre base de données clients ou produits ainsi que le déploiement" />
-    <meta property="og:image" content="https://pierrepicarddev.fr/images/laptop.jpg" />
-    <meta property="og:url" content="https://pierrepicarddev.fr" />
+    </script> 
     <?php   
     session_start(); ?>
     <?php

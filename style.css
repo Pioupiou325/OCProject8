@@ -343,24 +343,24 @@ nav ul li a {
   justify-content: center;
 }
 .container_stats {
-  display: flex;
-  height: 182px;
+  
+  display: flex; 
   border-top: 5px solid #5d2061;
   align-items: center;
   justify-content: space-around;
 }
-.stats {
-  height: 70%;
+.stats {  
   display: flex;
-  flex-direction: column;
-  object-fit: contain;
+  flex-direction: column;  
 }
 .logo_in_work {
-  height: 86%;
+  margin-top: 10px;
+  height: 86px;
+  width:auto;
+  object-fit: contain;
 }
 .container_stats p {
   margin-top: 5px;
-  margin-bottom: 50px;
   height: fit-content;
   font-size: 25px;
   color: black;
@@ -720,11 +720,9 @@ footer img {
   }
   .logo_in_work {
     margin-top: 10px;
-    height: 50%;
+    
   }
-  .stats {
-    height: 100px;
-  }
+  
 }
 @media (max-width: 780px) {
   .mobile {

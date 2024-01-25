@@ -555,9 +555,6 @@ img {
   margin: 0;
   border-radius: 50%;
 }
-.services p {
-  font-weight: bold;
-}
 .cards_services {
   width: 85%;
   display: flex;

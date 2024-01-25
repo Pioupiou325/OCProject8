@@ -3,7 +3,8 @@ const projectsGallery = document.getElementById("gallery");
 const nbr_projects = content.length;
 const user = "Pioupiou325";
 const headers = {
-  Authorization: "Bearer ",
+  Authorization:
+    "Bearer ",
   "Content-Type": "application/json",
 };
 let content_affiche = 0;

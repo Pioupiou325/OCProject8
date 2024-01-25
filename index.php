@@ -123,22 +123,22 @@ echo "</script>";
 <section class=services>
   <div class="cards_services">
 <div class="service">
-<p>  
+<h4>  
 Amélioration SEO & performances de votre site
-</p>
+    </h4>
 <img src="./datas/seo.jpg" alt="seo">
 </div>
 <div class="service">
-  <p>Création de votre site complet</p>
+  <h4>Création de votre site complet</h4>
   <img src="./datas/laptop.jpg" alt="laptop">
 
 </div>
   <div class="service">
-    <p>Hébergement</p>
+    <h4>Hébergement</h4>
   <img src="./datas/serveurs.jpg" alt="serveurs">
 
 </div>
-  <div class="service"><p>Maintenance</p>
+  <div class="service"><h4>Maintenance</h4>
   <img src="./datas/maintenance.jpg" alt="maintenance">
   </div>
 

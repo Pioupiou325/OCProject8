@@ -56,10 +56,12 @@ echo "</script>";
       <ul>
         <li class="desktop"><a href="#home">PORTFOLIO</a></li>
         <li class="desktop"><a href="#projets">PROJETS</a></li>
+        <li class="desktop"><a href="#services">SERVICES</a></li>
         <li class="desktop"><a href="#contact">CONTACT</a></li>
 
         <li class="mobile"><a href="#home"><img src="./datas/logo_home.png" alt="portfolio"></a></li>
         <li class="mobile"><a href="#projets"><img src="./datas/logo_projets.png" alt="projets"></a></li>
+        <li class="mobile"><a href="#services"><img src="./datas/logo_skills.png" alt="services"></a></li>
         <li class="mobile"><a href="#contact"><img src="./datas/logo_contact.png" alt="contact"></a></li>
       </ul>
     </nav>
@@ -91,8 +93,8 @@ echo "</script>";
       <div id="gallery" class="gallery">
       </div>       
     </section>
-<section class=competences_section>
-  <h3>Mes Compétences</h3>
+<section id="services" class=competences_section>
+  <h3>Mes Services & Compétences</h3>
   <div class="competences-container">
 <div class="competences">
         <img src="./datas/logo_html.png" alt="html">
@@ -118,7 +120,7 @@ echo "</script>";
       </div>       
       </div>
 </section>
-<section id="services" class=services>
+<section class=services>
   <div class="cards_services">
 <div class="service">
 <p>  

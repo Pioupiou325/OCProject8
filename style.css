@@ -93,7 +93,7 @@ header {
   padding-right: 0;
 }
 #contact,
-#projets {
+#projets, #services {
   margin-top: -120px;
   padding-top: 120px;
 }
@@ -544,18 +544,18 @@ img {
   margin-top: 0;
   margin-bottom: 0;
 }
-#services {
+.services {
   display: flex;
   margin-bottom: 300px;
   justify-content: center;
 }
-#services img {
+.services img {
   object-fit: cover;
   overflow: hidden;
   margin: 0;
   border-radius: 50%;
 }
-#services p {
+.services p {
   font-weight: bold;
 }
 .cards_services {

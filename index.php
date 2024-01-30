@@ -162,10 +162,10 @@ Amélioration SEO & performances de votre site
         <input type="email" name="user_mail" placeholder="Entrez votre email" id="email" autocomplete="email"/>
 
         <label for ="object">Objet de la demande</label>
-        <input type="text" name="object" placeholder="objet de la demande" id="object" autocomplete="object"/>
+        <input type="text" name="object" placeholder="objet de la demande" id="object" autocomplete="subject"/>
 
         <label for="demande">Votre demande</label>
-        <textarea name="demande" placeholder="Ecrivez ici" id="demande" autocomplete="demande"></textarea>      
+        <textarea name="demande" placeholder="Ecrivez ici" id="demande" autocomplete="message"></textarea>      
 
         <input type="submit" value="ENVOYER" />
       </fieldset>
